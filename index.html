@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Crop Advisory System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Crop Advisory System</h1>
+    <nav>
+      <button id="languageToggle">Switch Language</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="soil-advisory" class="card">
+      <h2>Soil Health Advisory</h2>
+      <p id="soil-info">Get soil testing info, pH, fertility status, and fertilizer guidance here.</p>
+      <button onclick="fetchSoilAdvisory()">Fetch Soil Advisory</button>
+    </section>
+
+    <section id="weather-updates" class="card">
+      <h2>Weather Updates</h2>
+      <p id="weather-info">Real-time weather alerts and crop protection tips.</p>
+      <button onclick="fetchWeather()">Get Weather Update</button>
+    </section>
+
+    <section id="pest-detection" class="card">
+      <h2>Pest & Disease Detection</h2>
+      <input type="file" id="pestImage" accept="image/*" />
+      <button onclick="uploadPestImage()">Diagnose Pest/Disease</button>
+      <p id="pest-result"></p>
+    </section>
+
+    <section id="irrigation-advisory" class="card">
+      <h2>Irrigation Advisory</h2>
+      <p id="irrigation-info">Water requirement stage-wise suggestions.</p>
+      <button onclick="fetchIrrigationAdvisory()">Get Irrigation Tips</button>
+    </section>
+
+    <section id="market-prices" class="card">
+      <h2>Market Prices</h2>
+      <p id="market-info">Real-time mandi prices for crops.</p>
+      <button onclick="fetchMarketPrices()">Get Market Prices</button>
+    </section>
+
+    <section id="feedback" class="card">
+      <h2>Feedback</h2>
+      <textarea id="feedbackText" placeholder="Your feedback here"></textarea>
+      <button onclick="submitFeedback()">Submit Feedback</button>
+      <p id="feedbackResponse"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Crop Advisory System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
